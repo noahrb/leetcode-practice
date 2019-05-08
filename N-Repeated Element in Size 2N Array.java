@@ -4,10 +4,11 @@
  * Return the element repeated N Times
  */
 
+import java.util.Comparator;
 
 class Solution {
     public int repeatedNTimes(int[] A) {
-        Integer
+        shellSort(A, new IntegerComparator());
 
         return 0;
     }
@@ -18,10 +19,10 @@ class Solution {
 	 * @param input Generic type array to be sorted.
 	 * @param cmp   Comparator passed in to determine the sort.
 	 */
-	public static <T> void shellSort(T[] input, Comparator<? super T> cmp) {
+	public static void shellSort(int[] input, IntegerComparator cmp) {
 		for (int gapSize = input.length / 2; gapSize > 0; gapSize /= 2) {
 			for (int i = gapSize; i < input.length; i++) {
-				T inputI = input[i];
+				int inputI = input[i];
 				int j;
 
 				for (j = i - gapSize; j >= 0 && cmp.compare(input[j], inputI) > 0; j -= gapSize) {
@@ -31,9 +32,9 @@ class Solution {
 			}
 		}
     }
-    
+}
     //Integer Comparator
-class IntegerComparator implements Comparator<Integer> {
+	class IntegerComparator implements Comparator<Integer> {
 
 	/**
 	 * 2 input integers. Compares them. Returns -1 if left < right, returns 1 if
@@ -43,5 +44,4 @@ class IntegerComparator implements Comparator<Integer> {
 	public int compare(Integer o1, Integer o2) {
 		return o1.compareTo(o2);
 	}
-}
 }
