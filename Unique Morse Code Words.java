@@ -2,10 +2,12 @@
 
 import java.util.ArrayList;
 import java.util.HashSet;
-import java.util.Map;
+import java.util.HashMap;
 
 class Solution {
     public int uniqueMorseRepresentations(String[] words) {
+        if(words.length == 0)
+            return 0;
         HashSet<String> set = new HashSet<String>();
         //ArrayList<String> list = new ArrayList<String>();
         String[] morseArr = wordsToMorse(words);
@@ -18,13 +20,16 @@ class Solution {
                 set.add(morseArr[i]);
             }
         }
+        if(count == 0)
+            count++;
+
         return count;
     }
 
     private String[] wordsToMorse(String[] words) {
         String[] morse26 = {".-","-...","-.-.","-..",".","..-.","--.","....","..",".---","-.-",".-..","--","-.","---",".--.","--.-",".-.","...","-","..-","...-",".--","-..-","-.--","--.."};
         char[] alphabet = "abcdefghijklmnopqrstuvwxyz".toCharArray();
-        Map<Character, String> map = new Map<>();
+        HashMap<Character, String> map = new HashMap<>();
         for(int i = 0; i < morse26.length; i++) {
             map.put(alphabet[i], morse26[i]);
         }
