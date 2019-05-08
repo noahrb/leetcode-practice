@@ -8,15 +8,13 @@ class Solution {
     public int uniqueMorseRepresentations(String[] words) {
         if(words.length == 0)
             return 0;
-        HashSet<String> set = new HashSet<String>();
-        //ArrayList<String> list = new ArrayList<String>();
+        ArrayList<String> set = new ArrayList<>();
         String[] morseArr = wordsToMorse(words);
         int count = 0;
+        
         for(int i = 0; i < morseArr.length; i++) {
-            if(set.contains(morseArr[i])) {
+            if(!set.contains(morseArr[i])) {
                 count++;
-                set.add(morseArr[i]);
-            } else {
                 set.add(morseArr[i]);
             }
         }
@@ -43,7 +41,7 @@ class Solution {
                 temp += map.get(arr[j]);
             }
             output[i] = temp;
-            // ***** ADDS A SPACE BETWEEN WORDS ***** output += " ";
+            System.out.println(output[i]);
         }
         return output;
     }
