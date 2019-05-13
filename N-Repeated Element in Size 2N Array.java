@@ -11,11 +11,21 @@ class Solution {
     public int repeatedNTimes(int[] A) {
         shellSort(A, new IntegerComparator());
 		// mergeSort(A, 0, A.length-1);
-		
+		HashMap<Integer, Integer> map = new HashMap<>();
 		for(int i = 0; i < A.length; i++) {
-			
-		}
-        return 0;
+            if(map.containsKey(A[i])) {
+                int val = map.get(A[i]);
+                map.put(A[i], val);
+            } else {
+                map.put(A[i], 1);
+            }
+        }
+        int length = A.length;
+        for(int i = 0; i < A.length; i++) {
+            if(map.get(A[i]).equals(length/2))
+                return A[i];
+        }
+        return null;
     }
 
 
