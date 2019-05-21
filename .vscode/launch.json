@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - Runner",
+            "request": "launch",
+            "mainClass": "Runner",
+            "projectName": "leetcode-practice_e1b43d4a"
+        },
+        {
+            "type": "java",
             "name": "Debug (Launch) - Current File",
             "request": "launch",
             "mainClass": "${file}"

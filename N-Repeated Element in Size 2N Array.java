@@ -25,7 +25,7 @@ class Solution {
             if(map.get(A[i]).equals(length/2))
                 return A[i];
         }
-        return null;
+        return 0;
     }
 
 
