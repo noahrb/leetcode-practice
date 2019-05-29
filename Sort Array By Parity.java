@@ -3,7 +3,9 @@ import java.util.Comparator;
 class Solution {
     public int[] sortArrayByParity(int[] A) {
         //Linked list practice
-        insertionSort(A, new ParityComparator());
+        //*** WORKS */insertionSort(A, new ParityComparator());
+
+        //Attempts at faster algorithm
 
         return A;
     }
@@ -30,13 +32,9 @@ class Solution {
 		}
     }
 }
-    //Integer Comparator
 class ParityComparator implements Comparator<Integer> {
-
-	/**
-	 * 2 input integers. Compares them. Returns returns 1 if
-	 * even, and 0 if they odd.
-	 */
+	
+	// 2 input integers. Compares them. Returns returns 1 if even, and 0 if they odd.
 	@Override
 	public int compare(Integer o1, Integer o2) {
         if(o1 % 2 == 0) {

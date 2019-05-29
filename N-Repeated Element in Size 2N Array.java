@@ -3,7 +3,6 @@
  * 
  * Return the element repeated N Times
  */
-
 import java.util.Comparator;
 import java.util.HashMap;
 
@@ -27,7 +26,6 @@ class Solution {
         }
         return 0;
     }
-
 
     // Main function that sorts arr[l..r] using 
     // merge() 
@@ -112,10 +110,10 @@ class Solution {
 				input[j + gapSize] = inputI;
 			}
 		}
-	}
-	
-	  /* A utility function to print array of size n */
-	  static void printArray(int arr[]) 
+    }
+    
+	/* A utility function to print array of size n */
+	static void printArray(int arr[]) 
 	  { 
 		  int n = arr.length; 
 		  for (int i=0; i<n; ++i) 
