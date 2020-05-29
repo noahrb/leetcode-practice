@@ -1,18 +1,24 @@
+package UniquePathsIII;
+
 import java.util.LinkedList;
 
 class UniquePathsIII {
     public static void main(String[] args) {
         System.out.println("test");
+        testGraph();
 
-        
-    }
+      }
 
-    void dfsImplementation() {
+      public int uniquePathsIII(int[][] grid) {
 
-    }
+        return 0;
+      }
 
+      void dfsImplementation() {
 
-    public void testGraph() {
+      }
+
+      public static void testGraph() {
       // Object of graph is created. 
       Graph<Integer> g = new Graph<Integer>(); 
   
@@ -42,10 +48,5 @@ class UniquePathsIII {
   
       // tells whether vertex is present or not 
       g.hasVertex(5); 
-      }
-      Graph g = new Graph(0);
-      public int uniquePathsIII(int[][] grid) {
-        
-        return 0;
       }
 }
